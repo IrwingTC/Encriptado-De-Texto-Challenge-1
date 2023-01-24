@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Recursos/Image/GBM.png" type="image/x-icon">
+    <link rel="stylesheet" href="Recursos/ITC_style.css">
+    <script type="text/javascript" src="Recursos/ITC_JavaScript.js"></script>
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <div class="contenedorLogo">
+            <img class="logoAlura" src="Recursos/Image/Logo.png" alt="Logo Alura">
+        </div>
+    </header>
+    <main>
+        <section class="entrada">
+            <div class="contenedorIngresarTexto">
+                <textarea name="textoIngresado" id="ingresarTexto" cols="70" rows="10" onkeyup="this.value=letras(this.value)" placeholder="Ingrese el texto aquí" ></textarea>
+                <div class="contenedorInfo">
+                    <span class="logoInfo"><img  src="Recursos/Image/Vector.png"/></span>
+                    Solo letras minúsculas y sin acentos.
+                </div>
+                <div class="contenedorBotones">
+                    <button id="encriptar" onclick="encriptarTexto()">Encriptar</button>
+                    <button id="desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <section class="salida">
+            <div class="contenedorMostrarTexto">
+                <img src="Recursos/Image/Muñeco.png" id="muñeco"/>
+                <p id="notFound"> Ningún mensaje fue encontrado</p>
+                <p id="mensajeIngresarTexto">Ingresar el texto que deseees encriptar o desencriptar</p>
+            </div>
+            <div class="encriptado no display">
+                <textarea class="desencriptado" readonly name="textoResultado" id="contenidoTexto"></textarea>
+                <button class="copiae" id="copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="pieDePagina">Challenge by: <a href="https://www.oracle.com/ar/education/oracle-next-education/" target="_blank">Oracle ONE</a>. Provided by: <a href="https://www.aluracursos.com/" target="_blank">Alura Latam</a>. Coded by: <a target="_blank" href="https://github.com/IrwingTC">Irwing Torres</a>.</p>
+    </footer>
+</body>
+</html>
